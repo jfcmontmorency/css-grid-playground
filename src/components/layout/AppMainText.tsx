@@ -14,19 +14,20 @@ function AppMainText() {
   return (
     <main className={styles.info} {...mainProps}>
       <article>
-        <button className={styles.dismissTrigger} title="Close" type="button" onClick={handleDismissArticle}>
-          <img src={closeIcon} alt="Close" />
+        <button className={styles.dismissTrigger} title="Fermer" type="button" onClick={handleDismissArticle}>
+          <img src={closeIcon} alt="Fermer" />
         </button>
-        Online playground for CSS Grids where you can add/remove elements, edit CSS properties, see the changes in real
-        time, and share the state via URL. It also comes with presets inspired by{' '}
+        Terrain de jeu en ligne pour les grilles CSS où vous pouvez ajouter/supprimer des éléments, modifier les
+        propriétés CSS, voir les changements en temps réel, et partager l'état via une URL. Il propose aussi des
+        modèles inspirés des exemples de{' '}
         <a href="https://web.dev/learn/css/grid" target="_blank" rel="noreferrer">
           web.dev
-        </a>
-        's examples, and supports{' '}
+        </a>{' '}
+        et prend en charge les variables{' '}
         <a href="https://open-props.style/#colors" target="_blank" rel="noreferrer">
           Open Props
-        </a>{' '}
-        variables.
+        </a>
+        .
       </article>
     </main>
   )

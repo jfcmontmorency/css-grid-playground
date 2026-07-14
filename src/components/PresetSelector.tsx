@@ -19,7 +19,7 @@ export function PresetSelector() {
           }
         }}
       >
-        <optgroup label="Example presets">
+        <optgroup label="Exemples de modèles">
           {gridPresets.map((preset, index) => {
             return (
               <option key={`preset-${index}`} value={index}>
@@ -32,14 +32,14 @@ export function PresetSelector() {
       </select>
       {store.lastModified !== undefined && (
         <button
-          title="Reset all changes and load the original preset"
+          title="Annuler tous les changements et recharger le modèle d'origine"
           type="button"
           onClick={() => {
             store.selectPreset(Number(currentRef.current))
           }}
         >
-          <img src={restoreIcon} alt="Reset" />
-          <span className="sm-hidden">Restore</span>
+          <img src={restoreIcon} alt="Réinitialiser" />
+          <span className="sm-hidden">Restaurer</span>
         </button>
       )}
     </div>

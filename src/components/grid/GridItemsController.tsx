@@ -44,7 +44,7 @@ export function GridItemsController() {
 
   return (
     <GridController
-      title="Item: "
+      title="Élément : "
       code={isCommonStylesMode ? commonStyles : currentGridItem?.styles}
       onCodeChange={({ code: newCode }) => {
         if (isCommonStylesMode) {
@@ -74,7 +74,7 @@ export function GridItemsController() {
           onChange={(value) => {
             setCurrentGridItemIndex(value)
           }}
-          label={'Grid Item styles:'}
+          label={'Styles des éléments :'}
           labelTemplate="#%"
         />
       }

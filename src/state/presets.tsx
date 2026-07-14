@@ -18,26 +18,27 @@ function createGrids(numGrids: number, numItems: number): PlaygroundState['grids
 
 export const gridPresets: GridPreset[] = [
   {
-    name: 'Preset: Basic',
-    description: 'This is the default demo. It is a double grid with 6 items.',
+    name: 'Modèle : Basique',
+    description: 'Ceci est la démo par défaut. Il s\'agit d\'une double grille avec 6 éléments.',
     createState: () => ({
       selectedGrid: -1,
       selectedGridItem: -1,
-      wrapperStyles: `display: block;
-      padding: 1rem;
-      border: 4px dotted var(--sand-3);`,
+      wrapperStyles: `display: block;`,
       gridStyles: `display: grid;
+      padding: 0.5rem;
+      background: var(--violet-1);
+      border: 2px solid var(--violet-5);
       grid-template-columns: 1fr 1fr 1fr;
       gap: 0.5rem;`,
-      gridItemStyles: `background: var(--sand-2);
-      border: 2px solid var(--sand-5);
-      color: var(--sand-8);`,
+      gridItemStyles: `background: var(--violet-2);
+      border: 2px solid var(--violet-5);
+      color: var(--violet-8);`,
       grids: createGrids(1, 6),
     }),
   },
   {
-    name: 'Sidebar Layout',
-    description: 'Typical layout with a left sidebar and main content.',
+    name: 'Mise en page avec barre latérale',
+    description: 'Mise en page typique avec une barre latérale gauche et un contenu principal.',
     createState: () => ({
       selectedGrid: -1,
       selectedGridItem: -1,
@@ -55,9 +56,9 @@ export const gridPresets: GridPreset[] = [
     }),
   },
   {
-    name: 'Holy Grail Layout',
-    description: `Typical layout with header, main content and footer. 
-      Change the height of the wrapper to 100vh to target the page height.`,
+    name: 'Mise en page « Holy Grail »',
+    description: `Mise en page typique avec en-tête, contenu principal et pied de page.
+      Changez la hauteur du conteneur à 100vh pour cibler la hauteur de la page.`,
     createState: () => ({
       selectedGrid: -1,
       selectedGridItem: -1,
@@ -80,9 +81,9 @@ export const gridPresets: GridPreset[] = [
   },
 
   {
-    name: 'Holy Grail Layout II',
-    description: `A layout with header, main content, sidebar, aside and footer. 
-      This demo also showcases how can you apply individual styles to each child element.`,
+    name: 'Mise en page « Holy Grail » II',
+    description: `Une mise en page avec en-tête, contenu principal, barre latérale, aside et pied de page.
+      Cette démo montre aussi comment appliquer des styles individuels à chaque élément enfant.`,
     createState: () => ({
       selectedGrid: -1,
       selectedGridItem: -1,
@@ -105,15 +106,15 @@ export const gridPresets: GridPreset[] = [
           items: [
             {
               styles: 'grid-area: header;',
-              text: 'Header',
+              text: 'En-tête',
             },
             {
               styles: 'grid-area: sidebar;',
-              text: 'Sidebar',
+              text: 'Barre latérale',
             },
             {
               styles: 'grid-area: main;',
-              text: 'Main',
+              text: 'Principal',
             },
             {
               styles: 'grid-area: aside;',
@@ -121,7 +122,7 @@ export const gridPresets: GridPreset[] = [
             },
             {
               styles: 'grid-area: footer;',
-              text: 'Footer',
+              text: 'Pied de page',
             },
           ],
         },
@@ -129,8 +130,8 @@ export const gridPresets: GridPreset[] = [
     }),
   },
   {
-    name: 'Centered Content',
-    description: 'The content is fully centered, both horizontally and vertically.',
+    name: 'Contenu centré',
+    description: "Le contenu est entièrement centré, à la fois horizontalement et verticalement.",
     createState: () => ({
       selectedGrid: -1,
       selectedGridItem: -1,
@@ -155,9 +156,9 @@ export const gridPresets: GridPreset[] = [
     }),
   },
   {
-    name: 'RAM Technique',
-    description: `RAM Technique: Repeat, Auto, Minmax. We also use 'aspect-ratio' to 
-    keep the items proportions consistent in any screen size.`,
+    name: 'Technique RAM',
+    description: `Technique RAM : Repeat, Auto, Minmax. Nous utilisons aussi 'aspect-ratio' pour
+    garder des proportions d'éléments cohérentes sur toutes les tailles d'écran.`,
     createState: () => ({
       selectedGrid: -1,
       selectedGridItem: -1,
@@ -180,19 +181,18 @@ export const gridPresets: GridPreset[] = [
     }),
   },
   {
-    name: 'Pokémon Boxes',
-    description: 'This demo combines the RAM Technique with nested grids of proportional 6x5 elements.',
+    name: 'Le calendrier',
+    description: 'Une grille de 7 colonnes, comme les jours de la semaine dans un calendrier.',
     createState: () => ({
       selectedGrid: -1,
       selectedGridItem: -1,
-      wrapperStyles: `display: grid;
-      grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
-      gap: 1rem;
-      align-items: start;`,
+      wrapperStyles: `display: block;
+      padding: 1rem;`,
       gridStyles: `display: grid;
       gap: 0.5rem;
       padding: 0.5rem;
-      grid-template-columns: repeat(6, 1fr);
+      width: 400px;
+      grid-template-columns: repeat(7, 1fr);
       grid-template-rows: repeat(5, 1fr);
       background: var(--cyan-1);
       border: 2px solid var(--cyan-5);`,
@@ -200,7 +200,7 @@ export const gridPresets: GridPreset[] = [
       border: 2px solid var(--cyan-5);
       color: var(--cyan-8);
       aspect-ratio: 1;`,
-      grids: createGrids(2, 30),
+      grids: createGrids(1, 35),
     }),
   },
 ]

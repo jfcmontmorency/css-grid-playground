@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
 import Playground from './components/Playground'
-import AppFooter from './components/layout/AppFooter'
-import AppHeader from './components/layout/AppHeader'
-import AppMainText from './components/layout/AppMainText'
+// import AppHeader from './components/layout/AppHeader'
+// import AppMainText from './components/layout/AppMainText'
 import usePlaygroundStore from './state/usePlaygroundStore'
 
 function App() {
@@ -22,11 +21,10 @@ function App() {
   return (
     <div id="app">
       <div>
-        <AppHeader />
+        {/* <AppHeader /> */}
         <Playground />
-        <AppMainText />
+        {/* <AppMainText /> */}
       </div>
-      <AppFooter />
     </div>
   )
 }

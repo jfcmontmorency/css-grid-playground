@@ -47,16 +47,16 @@ export function ShowCodeTrigger() {
     <>
       <dialog className={cn('dialog', 'code-dialog')} ref={dialogRef}>
         <form method="dialog">
-          <button type="button" title="Copy code" onClick={handleCopyButtonClick}>
-            <img src={copyIcon} alt="Copy" />
+          <button type="button" title="Copier le code" onClick={handleCopyButtonClick}>
+            <img src={copyIcon} alt="Copier" />
           </button>
-          <button type="submit">Close</button>
+          <button type="submit">Fermer</button>
         </form>
         <pre className="source-code" ref={codePreviewRef} onClick={handleCopyCodeOnClick}>
           <code>{generateGridsHtmlCode(store)}</code>
         </pre>
       </dialog>
-      <button type="button" title="Show code" onClick={handleOpenDialog}>
+      <button type="button" title="Afficher le code" onClick={handleOpenDialog}>
         <img src={codeIcon} alt="Code" />
         <span className="sm-hidden">Code</span>
       </button>

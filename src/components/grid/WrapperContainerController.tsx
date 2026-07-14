@@ -10,7 +10,7 @@ export function WrapperContainerController() {
 
   return (
     <GridController
-      title="Wrapper Styles"
+      title="Styles du conteneur"
       code={code}
       onCodeChange={({ code }) => {
         setCode(code)

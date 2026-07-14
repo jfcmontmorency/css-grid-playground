@@ -76,13 +76,13 @@ export default function GridController({
               <button
                 disabled={disabledButtons.includes('collapse')}
                 type="button"
-                title={expanded ? 'Collapse editor' : 'Expand editor'}
+                title={expanded ? "Réduire l'éditeur" : "Développer l'éditeur"}
                 onClick={() => {
                   setExpanded(!expanded)
                 }}
               >
-                {expanded && <img src={collapseIcon} alt="Collapse editor" aria-label="Collapse editor" />}
-                {!expanded && <img src={expandIcon} alt="Expand editor" aria-label="Expand editor" />}
+                {expanded && <img src={collapseIcon} alt="Réduire l'éditeur" aria-label="Réduire l'éditeur" />}
+                {!expanded && <img src={expandIcon} alt="Développer l'éditeur" aria-label="Développer l'éditeur" />}
               </button>
             </div>
           )}
@@ -94,43 +94,43 @@ export default function GridController({
             <button
               disabled={disabledButtons.includes('add')}
               type="button"
-              title="Duplicate & add last element"
+              title="Dupliquer et ajouter en dernier"
               onClick={() => {
                 onAddClick?.(getContext())
               }}
             >
-              <img src={addIcon} alt="Add" aria-label="Add" />
+              <img src={addIcon} alt="Ajouter" aria-label="Ajouter" />
             </button>
           )}
           {buttons.includes('remove') && (
             <button
               disabled={disabledButtons.includes('remove')}
               type="button"
-              title="Remove last element"
+              title="Supprimer le dernier élément"
               onClick={() => {
                 onRemoveClick?.(getContext())
               }}
             >
-              <img src={removeIcon} alt="Add" aria-label="Add" />
+              <img src={removeIcon} alt="Supprimer" aria-label="Supprimer" />
             </button>
           )}
           {buttons.includes('reset') && (
             <button
               disabled={disabledButtons.includes('reset')}
               type="button"
-              title="Reset styles"
+              title="Réinitialiser les styles"
               onClick={() => {
                 onResetClick?.(getContext())
               }}
             >
-              <img src={resetIcon} alt="Add" aria-label="Add" />
+              <img src={resetIcon} alt="Réinitialiser" aria-label="Réinitialiser" />
             </button>
           )}
         </div>
       </div>
       {expanded && (
         <CodeEditorField
-          placeholder="/** Custom CSS styles **/"
+          placeholder="/** Styles CSS personnalisés **/"
           name={name}
           value={cleanCode}
           className={styles.code}

@@ -1,9 +1,15 @@
 html {
-  background: var(--pink-4);
+  background: var(--color-primary);
 }
 
 body {
-  background: #fff;
+  background: var(--color-bg);
+}
+
+// Icons are monochrome (stroke: currentColor) SVGs loaded via <img>, so they can't
+// inherit CSS color from the page. Invert them since the app is dark-only.
+img {
+  filter: invert(1);
 }
 
 body,

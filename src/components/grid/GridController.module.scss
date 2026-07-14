@@ -56,7 +56,7 @@
   }
 
   button:hover {
-    background: var(--stone-4);
+    background: var(--color-panel-hover);
 
     img {
       opacity: 0.9;
@@ -64,7 +64,7 @@
   }
 
   button:active {
-    background: var(--stone-5);
+    background: var(--color-panel-active);
   }
 }
 

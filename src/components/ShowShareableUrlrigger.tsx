@@ -22,18 +22,18 @@ export function ShowShareableUrlrigger() {
     <>
       <dialog className={cn('dialog')} ref={dialogRef}>
         <form method="dialog">
-          <button type="submit">Close</button>
+          <button type="submit">Fermer</button>
         </form>
         <section className="wrap-text">
-          <p>Shareable URL:</p>
+          <p>URL de partage :</p>
           <a href={shareableUrl} target="_blank" rel="noreferrer">
             {shareableUrl}
           </a>
         </section>
       </dialog>
-      <button type="button" title="Get Shareable URL" onClick={handleOpenDialog}>
-        <img src={linkIcon} alt="Permalink" />
-        <span className="sm-hidden">Share</span>
+      <button type="button" title="Obtenir l'URL de partage" onClick={handleOpenDialog}>
+        <img src={linkIcon} alt="Lien permanent" />
+        <span className="sm-hidden">Partager</span>
       </button>
     </>
   )

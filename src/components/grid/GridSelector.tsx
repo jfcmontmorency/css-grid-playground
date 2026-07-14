@@ -27,13 +27,13 @@ export default function GridSelector({
           onChange?.(Number(e.target.value))
         }}
       >
-        <option value={'-1'}>Base Styles</option>
+        <option value={'-1'}>Styles de base</option>
         {elementCount > 0 && (
-          <optgroup label={label ?? 'Elements'}>
+          <optgroup label={label ?? 'Éléments'}>
             {Array.from({ length: elementCount }).map((_, index) => {
               return (
                 <option key={`el-${index}`} value={index}>
-                  {labelTemplate?.replace('%', (index + 1).toString()) ?? `Element ${index + 1}`}
+                  {labelTemplate?.replace('%', (index + 1).toString()) ?? `Élément ${index + 1}`}
                 </option>
               )
             })}

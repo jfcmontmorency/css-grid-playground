@@ -28,7 +28,7 @@ export function GridsController() {
   return (
     <GridController
       autoFocus
-      title="Grid: "
+      title="Grille : "
       code={isCommonStylesMode ? commonGridStyles : currentGrid?.styles}
       onCodeChange={({ code: newCode }) => {
         setCode(newCode, isCommonStylesMode ? undefined : currentGridIndex)
@@ -54,7 +54,7 @@ export function GridsController() {
           onChange={(value) => {
             setCurrentGridIndex(value)
           }}
-          label="Grid styles:"
+          label="Styles de la grille :"
           labelTemplate="#%"
         />
       }
