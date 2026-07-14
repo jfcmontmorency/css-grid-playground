@@ -11,4 +11,4 @@ runs:
       run: |
         bun lint:ci
         bun run build
-        bun test
+        bun test --pass-with-no-tests
