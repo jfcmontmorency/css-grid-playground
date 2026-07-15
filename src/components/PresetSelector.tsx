@@ -1,47 +1,25 @@
-import restoreIcon from '@/assets/history.svg'
 import { gridPresets } from '@/state/presets'
-import usePlaygroundStore from '@/state/usePlaygroundStore'
-import { useRef } from 'react'
 import styles from './PresetSelector.module.scss'
 
-export function PresetSelector() {
-  const store = usePlaygroundStore()
-  const currentRef = useRef<string>(String(store.presetIndex ?? 0))
+type PresetSelectorProps = {
+  presetIndex: number
+  onChange: (presetIndex: number) => void
+}
 
+export function PresetSelector({ presetIndex, onChange }: PresetSelectorProps) {
   return (
     <div className={styles.selectWithButton}>
-      <select
-        defaultValue={store.presetIndex}
-        onChange={(e) => {
-          currentRef.current = e.target.value
-          if (!store.lastModified) {
-            store.selectPreset(Number(e.target.value))
-          }
-        }}
-      >
+      <select value={presetIndex} onChange={(e) => onChange(Number(e.target.value))}>
         <optgroup label="Exemples de modèles">
           {gridPresets.map((preset, index) => {
             return (
               <option key={`preset-${index}`} value={index}>
-                {/* {index === 0 ? '---' : preset.name} */}
                 {preset.name}
               </option>
             )
           })}
         </optgroup>
       </select>
-      {store.lastModified !== undefined && (
-        <button
-          title="Annuler tous les changements et recharger le modèle d'origine"
-          type="button"
-          onClick={() => {
-            store.selectPreset(Number(currentRef.current))
-          }}
-        >
-          <img src={restoreIcon} alt="Réinitialiser" />
-          <span className="sm-hidden">Restaurer</span>
-        </button>
-      )}
     </div>
   )
 }

@@ -77,13 +77,7 @@ export function generateGrids(state: PlaygroundState): JSX.Element[] {
     const grid = domElements[i]
 
     elements.push(
-      <GridContainer
-        gridIndex={i}
-        key={`grid${i}`}
-        className={grid.className}
-        css={grid.style}
-        items={grid.children}
-      />,
+      <GridContainer key={`grid${i}`} className={grid.className} css={grid.style} items={grid.children} />,
     )
   }
 

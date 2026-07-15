@@ -19,11 +19,9 @@ function createGrids(numGrids: number, numItems: number): PlaygroundState['grids
 export const gridPresets: GridPreset[] = [
   {
     name: 'Modèle : Basique',
-    description: 'Ceci est la démo par défaut. Il s\'agit d\'une double grille avec 6 éléments.',
+    description: "Ceci est la démo par défaut. Il s'agit d'une double grille avec 6 éléments.",
     createState: () => ({
-      selectedGrid: -1,
-      selectedGridItem: -1,
-      wrapperStyles: `display: block;`,
+      wrapperStyles: 'display: block;',
       gridStyles: `display: grid;
       padding: 0.5rem;
       background: var(--violet-1);
@@ -40,8 +38,6 @@ export const gridPresets: GridPreset[] = [
     name: 'Mise en page avec barre latérale',
     description: 'Mise en page typique avec une barre latérale gauche et un contenu principal.',
     createState: () => ({
-      selectedGrid: -1,
-      selectedGridItem: -1,
       wrapperStyles: 'display: block;',
       gridStyles: `display: grid;
       gap: 0.5rem;
@@ -60,8 +56,6 @@ export const gridPresets: GridPreset[] = [
     description: `Mise en page typique avec en-tête, contenu principal et pied de page.
       Changez la hauteur du conteneur à 100vh pour cibler la hauteur de la page.`,
     createState: () => ({
-      selectedGrid: -1,
-      selectedGridItem: -1,
       wrapperStyles: `height: 300px;
       `,
       gridStyles: `display: grid;
@@ -85,8 +79,6 @@ export const gridPresets: GridPreset[] = [
     description: `Une mise en page avec en-tête, contenu principal, barre latérale, aside et pied de page.
       Cette démo montre aussi comment appliquer des styles individuels à chaque élément enfant.`,
     createState: () => ({
-      selectedGrid: -1,
-      selectedGridItem: -1,
       wrapperStyles: `padding: 1rem;
       background: var(--pink-1);
       border: 2px solid var(--pink-5);`,
@@ -131,10 +123,8 @@ export const gridPresets: GridPreset[] = [
   },
   {
     name: 'Contenu centré',
-    description: "Le contenu est entièrement centré, à la fois horizontalement et verticalement.",
+    description: 'Le contenu est entièrement centré, à la fois horizontalement et verticalement.',
     createState: () => ({
-      selectedGrid: -1,
-      selectedGridItem: -1,
       wrapperStyles: `display: flex;
       justify-content: center;
       align-items: center;
@@ -160,8 +150,6 @@ export const gridPresets: GridPreset[] = [
     description: `Technique RAM : Repeat, Auto, Minmax. Nous utilisons aussi 'aspect-ratio' pour
     garder des proportions d'éléments cohérentes sur toutes les tailles d'écran.`,
     createState: () => ({
-      selectedGrid: -1,
-      selectedGridItem: -1,
       wrapperStyles: `display: block;
       `,
       gridStyles: `display: grid;
@@ -184,8 +172,6 @@ export const gridPresets: GridPreset[] = [
     name: 'Le calendrier',
     description: 'Une grille de 7 colonnes, comme les jours de la semaine dans un calendrier.',
     createState: () => ({
-      selectedGrid: -1,
-      selectedGridItem: -1,
       wrapperStyles: `display: block;
       padding: 1rem;`,
       gridStyles: `display: grid;
